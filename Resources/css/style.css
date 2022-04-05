@@ -1,0 +1,272 @@
+/* Universal Styles */
+
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+}
+
+
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px solid seashell;
+}
+
+/* This sets the contents of the header to a flex box and sets padding around the box */
+/* If try to put this into header above it doesn't work right needs to be set in the class Ithink */
+header .content {
+    display: flex;
+    padding: .43rem 1.1rem;
+}
+
+/* This sets the font properties of just the anchor elements in the header */
+header a {
+    color: seashell;
+    opacity: 0.9;
+    text-decoration: underline;    
+}
+
+/*This is the height of the logo img */
+header img {
+    height: 2.27rem;
+}
+
+/* This is the box that the ul is sitting inside of.*/
+header nav {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+}
+
+/* This makes everything in the ul line up horizontally due to flex display */
+nav ul {
+    display: flex;
+}
+
+/* This adds space between the li items otherwise they run into each other */
+nav li {
+   padding-left: 1rem;
+}
+
+
+
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    /*Need to put this in the main container so all the other blocks stack up on one another*/
+    /*Needs to be row to be able to shirnk as the browswer width changes!!!*/
+
+    flex-direction: row;
+
+}
+
+/* Mission Section */
+.main-content {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 31.81rem;
+    width: 54.54rem;
+    background-image: url('../images/img-mission-background.jpeg');
+    background-position:center;
+    background-size: cover;
+}
+
+/* Should each of these be in their own flex as well? that way they can stack on top of each other? */
+
+.headertwo {
+    display: flex;
+    flex-direction: column;
+    color: seashell;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+}
+
+.headerfour {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .25rem;
+}
+
+.mission-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+}
+
+.tea-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* this is just for the 2 header elements above the images of tea. Doesn't flow to next section div */
+.tea-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 45.45rem;
+    padding-top: 3rem;
+}
+
+/* this is the big div holding all tea images. need to set it's width to match the tea section and all flex items */
+.tea-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 45.45rem;
+}
+
+/* this is the container for the image and the underlying text */
+.image-plus-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    /* the padding puts space between each image-plus-text block */
+    padding: 1rem 1.5%;
+    width: 13.63rem;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    height: 9.09rem;
+    width: 13.63rem;
+}
+
+.image-plus-text .headerfour {
+    padding-top: 0.45rem;
+}
+
+
+/* Text under each image */
+.image-content {
+
+    /* text is in a box that encloses the space around it - need to center the box so use the flex attribute */
+    /* can do this way and makes a tiny box just around the words, 
+    otherwise if remove all it makes a box as big as image-plus-text and takes attributes from headerfour.
+    
+    display: flex;
+    justify-content: center;
+
+    So can actually get rid of the <div class="image-content"> lines as well!
+   */
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 22.72rem;
+    width: 54.54rem;
+    margin-top: 3rem;
+    background-image: url('../images/img-locations-background.webp');
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.location-text {
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+}
+
+.location-addresses {
+    display: flex;
+    margin-bottom: 5rem;
+    justify-content: space-evenly;
+    
+    /* need width befor justify content with space will have an effect! 
+    padding: 0 1.8rem;*/
+    width: 100%; 
+}
+
+.address-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    line-height: 3;
+    width: 30%;
+    max-width: 13.63rem;
+    height: 100%;
+    max-height: 14rem;
+    background-color: black;
+    opacity: 1;
+}
+
+.address-box h3 {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.contact-info {
+    display: flex;
+
+    /* can use flex flow to repalce flex-wrap and flex-direction */
+    flex-flow: column wrap;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+    line-height: 3;
+    width: 100%;
+    height: 9.09rem;
+}
+
+.copyright {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0.91rem;
+    height: 5rem;
+}
+
+
+/* need to add h5 override otehrwise reset style replaces this */
+.copyright h5 {
+    font-family: Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+}
